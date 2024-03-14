@@ -70,7 +70,6 @@
                         Console.WriteLine($"matrix1 != matrix2: {matrix1 != matrix2}");
                         break;
                     case 3:
-
                         City city1 = new City { Name = "Kyiv", Country = "Ukraine", Population = 3000000, Area = 839.1 };
                         City city2 = new City { Name = "New York", Country = "USA", Population = 8000000, Area = 783.8 };
                         Console.WriteLine("City 1:");
@@ -94,6 +93,27 @@
                         Console.WriteLine(city1 > city2);
                         Console.WriteLine("\nCity 1 population less than City 2 population check:");
                         Console.WriteLine(city1 < city2);
+                        break;
+
+                    case 4:
+                        CreditCard card1 = new CreditCard("1234567890123456", "John Doe", new DateTime(2026, 12, 31), 123, 1000.0);
+                        CreditCard card2 = new CreditCard("9876543210987654", "Jane Smith", new DateTime(2025, 12, 31), 456, 1500.0);
+
+                        Console.WriteLine("Initial balances:");
+                        Console.WriteLine($"Card 1 balance: {card1.Balance}");
+                        Console.WriteLine($"Card 2 balance: {card2.Balance}");
+
+                        CreditCard newCard1 = card1 + 200; 
+                        CreditCard newCard2 = card2 - 300; 
+
+                        Console.WriteLine("\nBalances after transactions:");
+                        Console.WriteLine($"New Card 1 balance: {newCard1.Balance}");
+                        Console.WriteLine($"New Card 2 balance: {newCard2.Balance}");
+
+                        Console.WriteLine($"\nAre Card 1 and Card 2 balances equal? {card1 == card2}");
+                        Console.WriteLine($"Is Card 1 balance greater than Card 2 balance? {card1 > card2}");
+                        Console.WriteLine($"Is Card 1 balance less than Card 2 balance? {card1 < card2}");
+                        break;
                     default:
                         Console.WriteLine("You entered another number");
                         break;
