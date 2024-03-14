@@ -69,6 +69,31 @@
                         Console.WriteLine($"matrix1 == matrix2: {matrix1 == matrix2}");
                         Console.WriteLine($"matrix1 != matrix2: {matrix1 != matrix2}");
                         break;
+                    case 3:
+
+                        City city1 = new City { Name = "Kyiv", Country = "Ukraine", Population = 3000000, Area = 839.1 };
+                        City city2 = new City { Name = "New York", Country = "USA", Population = 8000000, Area = 783.8 };
+                        Console.WriteLine("City 1:");
+                        city1.PrintCityInfo();
+                        Console.WriteLine("\nCity 2:");
+                        city2.PrintCityInfo();
+
+                        City city3 = city1 + 500000;
+                        City city4 = city2 - 2000000;
+
+                        Console.WriteLine("\nCity 3 (after population increase):");
+                        city3.PrintCityInfo();
+                        Console.WriteLine("\nCity 4 (after population decrease):");
+                        city4.PrintCityInfo();
+
+                        Console.WriteLine("\nCity 1 and City 2 population equality check:");
+                        Console.WriteLine(city1 == city2);
+                        Console.WriteLine("\nCity 3 and City 4 population inequality check:");
+                        Console.WriteLine(city3 != city4);
+                        Console.WriteLine("\nCity 1 population greater than City 2 population check:");
+                        Console.WriteLine(city1 > city2);
+                        Console.WriteLine("\nCity 1 population less than City 2 population check:");
+                        Console.WriteLine(city1 < city2);
                     default:
                         Console.WriteLine("You entered another number");
                         break;
